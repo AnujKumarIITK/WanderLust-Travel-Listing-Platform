@@ -14,6 +14,15 @@ module.exports.isLoggedIn = (req, res, next) => {
     next();
 };
 
+module.exports.isLoggedInForReview = (req, res, next) => {
+    if (!req.isAuthenticated()) {
+        req.session.redirectUrl = req.originalUrl; // optional but useful
+        req.flash("error", "You must be logged in to delete a review!");
+        return res.redirect("/login");
+    }
+    next();
+};
+
 // middleware to make the redirect URL available in the response locals for use in views
 module.exports.saveRedirectUrl = (req, res, next) => {
     if (req.session.redirectUrl) {

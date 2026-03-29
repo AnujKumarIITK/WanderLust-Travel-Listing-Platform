@@ -18,7 +18,8 @@ router.post("/",
 );
 
 //Reviews ==> DELETE Review Route
-router.delete("/:reviewId",
+router.delete("/:reviewId", 
+    isLoggedIn,
     isReviewAuthor, 
     wrapAsync(reviewController.destryReview)
 );
