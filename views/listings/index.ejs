@@ -1,0 +1,79 @@
+<% layout("/layouts/boilerplate") %>
+
+<br />
+<div class="listing-header">
+  <div>
+    <h3><b>Popular Destinations</b></h3>
+    <p><i>Explore stays loved by travelers around the world</i></p>
+  </div>
+
+  <!-- Tax Toggle Button -->
+  <div class="tax-toggle">
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="switchCheckDefault">
+      <label class="form-check-label" for="switchCheckDefault"><b>Display total after Taxes</b></label>
+    </div>
+  </div>
+</div>
+
+<!-- Filter Options -->
+<div id="filters">
+  <div id="filter">
+    <i class="fa-solid fa-fire"></i>
+    Trending Places
+  </div>
+  <div id="filter">
+    <i class="fa-solid fa-bed"></i>
+    Rooms
+  </div>
+  <div id="filter">
+    <i class="fa-solid fa-mountain-city"></i>
+    Iconic Cities
+  </div>
+  <div id="filter">
+    <i class="fa-solid fa-umbrella-beach"></i>
+    Beach
+  </div>
+  <div id="filter">
+    <i class="fa-solid fa-person-swimming"></i>
+    Pools
+  </div>
+  <div id="filter">
+    <i class="fa-solid fa-snowflake"></i>
+    Snowfall
+  </div>
+  <div id="filter">
+    <i class="fa-solid fa-mountain-sun"></i>
+    Mountains
+  </div>
+  <div id="filter">
+    <i class="fa-brands fa-fort-awesome"></i>
+    Castles
+  </div>
+  <div id="filter">
+    <i class="fa-solid fa-bridge-water"></i>
+    Bridges
+  </div>
+</div>
+
+
+<div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3">
+  <% for (let listing of allListings) { %>
+    <a href="/listings/<%= listing._id %>" class="listing-link">
+      <div class="card col listing-card">
+        <img src="<%= listing.image.url %>" class="card-img-top" alt="listing_image" style="height: 20rem">
+        <div class="card-img-overlay"></div>
+        <div class="card-body">
+          <p class="card-text">
+            <b><%= listing.title %></b> <br />
+            &#8377; <%= listing.price.toLocaleString("en-IN") %> /night
+            <i class="tax-info"> &nbsp; +18% GST</i>
+          </p>
+        </div>
+      </div>
+    </a>
+  <% } %>
+</div>
+
+
+

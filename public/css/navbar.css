@@ -1,0 +1,79 @@
+/*----- Navbar styles -----*/
+
+.navbar {
+    height: 5rem;
+    background-color: white;
+}
+
+.fa-compass {
+    color: #fe424d;
+    font-size: 2rem;
+}
+
+.nav-link {
+    color: #222222 !important;
+}
+
+/*--- Navbar Heading styles ---*/
+
+.nav-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 800;
+  font-style: italic;
+  letter-spacing: 1.5px;
+
+  color: #222;
+
+  text-shadow: 0 2px 8px rgba(0,0,0,0.15);
+
+  transition: all 0.3s ease;
+}
+
+.nav-title:hover {
+  color: #ff385c;
+  transform: translateX(-50%) scale(1.25);
+}
+
+/*--- Navbar Button styles ---*/
+
+.signup-btns, .login-btns, .logout-btns {
+    background-color: transparent !important;
+    color: #222222 !important;
+    border: 1px solid #222222 !important;
+    padding: 0.5rem 1rem !important;
+    border-radius: 0.5rem !important;
+    margin: 2px 0.5rem !important;
+}
+
+.signup-btns:hover, .login-btns:hover, .logout-btns:hover {
+    background-color: #222222 !important;
+    color: white !important;
+    border: 1px solid #222222 !important;
+    padding: 0.5rem 1rem !important;
+    border-radius: 0.5rem !important;
+    opacity: 0.8;
+}
+
+.buttons {
+    background-color: #d7303b !important;
+    color: white !important;
+    border: none !important;
+    padding: 0.5rem 1rem !important;
+    border-radius: 0.5rem !important;
+}
+
+.buttons:hover {
+    background-color: #fe424d !important;
+    color: white !important;
+    border: none !important;
+    padding: 0.5rem 1rem !important;
+    border-radius: 0.5rem !important;
+    opacity: 0.8;
+}
+
+

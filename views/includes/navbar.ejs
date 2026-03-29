@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass"></i></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+      <div class="navbar-nav">
+        <a class="nav-link buttons" href="/listings"><b><i>Explore Destinations</i></b></a>
+      </div>
+
+      <div class="nav-title">
+        WanderLust
+      </div>
+      
+      <div class="navbar-nav ms-auto">
+        <a class="nav-link buttons" href="/listings/new"><b>Become a Host</b></a>
+        <% if (!currUser) { %>
+          <a class="nav-link signup-btns" href="/signup"><b>Sign Up</b></a>
+          <a class="nav-link login-btns" href="/login"><b>Log In</b></a>
+        <% } %>
+        <% if (currUser) { %>
+          <a class="nav-link logout-btns" href="/logout"><b>Log Out</b></a>
+        <% } %>
+      </div>
+
+    </div>
+  </div>
+</nav>
+
