@@ -13,17 +13,17 @@ const reviewController = require("../controllers/reviews.js");
 //Reviews ==> POST Review Route
 router.post("/", 
     isLoggedIn, 
-    validateReview, 
+    validateReview,
     wrapAsync(reviewController.createReview)
 );
 
 //Reviews ==> DELETE Review Route
 router.delete("/:reviewId", 
     isLoggedIn, 
+    validateReview,
     isReviewAuthor, 
     wrapAsync(reviewController.destryReview)
 );
 
 module.exports = router;
-
 
