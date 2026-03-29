@@ -14,11 +14,13 @@ module.exports.isLoggedIn = (req, res, next) => {
     next();
 };
 
+// middleware.js to check if user is logged in before allowing them to delete a review
 module.exports.isLoggedInForReview = (req, res, next) => {
     if (!req.isAuthenticated()) {
+        let { id, reviewId } = req.params;
         req.session.redirectUrl = req.originalUrl; // optional but useful
         req.flash("error", "You must be logged in to delete a review!");
-        return res.redirect("/login");
+        return res.redirect(`/listings/${id}`);
     }
     next();
 };
