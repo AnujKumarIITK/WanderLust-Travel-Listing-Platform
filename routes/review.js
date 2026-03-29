@@ -4,7 +4,7 @@ const wrapAsync = require("../utils/wrapAsync.js");
 const ExpressError = require("../utils/ExpressError.js");
 const Listing = require("../models/listing.js");
 const Review = require("../models/review.js");
-const { validateReview, isLoggedIn, isReviewAuthor } = require("../middlware.js");
+const { validateReview, isLoggedIn, isReviewAuthor, isLoggedInForReview } = require("../middlware.js");
 
 const reviewController = require("../controllers/reviews.js");
 
@@ -19,7 +19,7 @@ router.post("/",
 
 //Reviews ==> DELETE Review Route
 router.delete("/:reviewId", 
-    isLoggedIn,
+    isLoggedInForReview,
     isReviewAuthor, 
     wrapAsync(reviewController.destryReview)
 );
