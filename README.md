@@ -98,9 +98,24 @@ WANDERLUST - TRAVEL AND LISTING PLATFORM
 - Store GeoJSON data in MongoDB
 - Display location on interactive map
 
-Example:
-```json
-{
-  "type": "Point",
-  "coordinates": [longitude, latitude]
-}
+## 🚀 Final Note
+
+WanderLust is a full-stack, production-ready travel platform showcasing modern web development, API integrations, and scalable design.  
+It reflects strong backend skills, clean UI, and real-world problem-solving ability.
+
+## 🌟 If You Like This Project
+
+- ⭐ Star the repository  
+- 🍴 Fork it  
+- 🚀 Share it with others  
+
+---
+
+## 📬 Let's Connect
+
+If you have any feedback, suggestions, or opportunities:
+
+- Feel free to reach out  
+- Open an issue  
+- Connect professionally  
+
