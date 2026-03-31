@@ -8,7 +8,7 @@ const { reviewSchema } = require("./schema.js");
 module.exports.isLoggedIn = (req, res, next) => {
     if (!req.isAuthenticated()) {
         req.session.redirectUrl = req.originalUrl; // Store the original URL the user was trying to access
-        req.flash("error", "You must be signed in to create a New Listing!");
+        req.flash("error", "You must be logged in to create a New Listing!");
         return res.redirect("/login");
     }    
     next();
