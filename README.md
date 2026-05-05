@@ -46,25 +46,6 @@ This project demonstrates:
 
 ---
 
-## 📂 Project Structure
-WANDERLUST - TRAVEL AND LISTING PLATFORM
-│
-├── controllers/ # Business logic (CRUD operations)
-├── models/ # Mongoose schemas
-├── routes/ # Express routes
-├── views/ # EJS templates
-├── public/ # Static files (CSS, JS)
-├── utils/ # Helper utilities
-├── init/ # Seed data
-│
-├── app.js # Main server file
-├── cloudConfig.js # Cloudinary configuration
-├── middleware.js # Custom middleware
-├── schema.js # Joi validation schemas
-├── package.json
-├── .env
-└── .gitignore
-
 ## ⚙️ Features
 
 ### 🌐 General Features
@@ -118,7 +99,6 @@ If you have any feedback, suggestions, or opportunities:
 - Feel free to reach out  
 - Open an issue  
 - Connect professionally  
-
 
 
 
